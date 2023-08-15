@@ -12,12 +12,7 @@ def get_product(barcode: int):
     if not product.empty:
         product_info = {
             "name": product.iloc[0]['Product Name'],
-            "description": product.iloc[0]['Description'],
-            "list_price": float(product.iloc[0]['List Price']),
-            "sale_price": float(product.iloc[0]['Sale Price']),
-            "brand": product.iloc[0]['Brand'],
-            "category": product.iloc[0]['Category'],
-            "available": bool(product.iloc[0]['Available'])
+            "sale_price": float(product.iloc[0]['Sale Price'])
         }
         return product_info
     else:
